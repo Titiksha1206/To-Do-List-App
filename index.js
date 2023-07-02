@@ -1,15 +1,21 @@
- const inputArea = document.querySelector('.enter-area');
-//  const buttonOne = document.querySelector('.button-1');
+const inputArea = document.querySelector('.enter-area');
  const listContainer = document.getElementById('list-container');
 
   function addTask(){
-    
+
     if(inputArea.value === ""){
         alert('You must write something!');
     }
     else{
         let li = document.createElement('li');
-        li.innerHTML = inputArea.value;
+        let priority = document.createElement('select');
+        priority.innerHTML = `
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    `;
+        li.innerHTML = `${inputArea.value}  - Priority: `;
+        li.appendChild(priority);
         listContainer.appendChild(li);
         let span = document.createElement('span');
         span.innerHTML = "\u00d7";

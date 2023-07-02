@@ -95,3 +95,9 @@ ul li span{
 ul li span:hover{
     background: #edeef0;
 }
+ ul li select{
+    color: #152677;
+}
+ul li select:hover{
+    background:rgba(92, 154, 16, 0.6);
+}
